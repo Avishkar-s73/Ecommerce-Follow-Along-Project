@@ -1,7 +1,7 @@
 # E--commerce-website
 
 ****
-## Milestone 1: Project Overview-
+# Milestone 1: Project Overview-
 
 In this milestone, we demonstrated the working of MERN Stack. And by using the MERN stack we are going to bulid an e-commerce website
 
@@ -15,9 +15,9 @@ Which is,
 
 **N - Node.js** - Used with express.js for server handling
 
-### **Project Features :- **
+## Project Features :-
 
-#### **Pages**
+- **Pages**
 1. **Authentication**
    - Login / Signup functionality.
    - User validation and session management.
@@ -41,7 +41,7 @@ Which is,
 
 In this milestone we learned how to setup a development enviroment for a backend project and also started with making Basic UI for Login page.-
 
-Key Learnings - 
+**Key Learnings -**
 
 - Learned tailwind css for login page UI
 - Learned to setup basic tools used in backend like -
@@ -68,6 +68,7 @@ Key learnings -
 - And finally learned to effectively handle the errors.
 
 
+
 ## Milestone 4: Project Overview -
 
 In this milestone we learned the following things -
@@ -79,6 +80,7 @@ Key learnings -
 - We learned password hashing using bcrypt
 - And lastly we learned about usage of jsonWebTokens for authentication.
 
+
 ## Milestone 5: Project Overview - 
 
 In this milestone we focused on creating a signup page for new users visiting the website,
@@ -87,3 +89,4 @@ Key Learnings -
 
 - We Learned how to create the UI for the Signup page using React and Tailwind CSS.
 - We also learned how to use RegEx (Regular expressions) for the validation of the inputs on the signup page.
+
