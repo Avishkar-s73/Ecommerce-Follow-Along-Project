@@ -87,3 +87,11 @@ Key Learnings -
 
 - We Learned how to create the UI for the Signup page using React and Tailwind CSS.
 - We also learned how to use RegEx (Regular expressions) for the validation of the inputs on the signup page.
+
+
+## Milestone 6: Project Overview -
+
+Key Learnings -
+
+- We learned how to encrytp the password and store it in the database (Hashing) , Using the Bcrypt package.
+- We also learned how to store data of new users inside the database.
