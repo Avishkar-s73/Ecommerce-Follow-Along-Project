@@ -1,7 +1,7 @@
 # E--commerce-website
 
 ****
-## Milestone 1: Project Overview-
+# Milestone 1: Project Overview-
 
 In this milestone, we demonstrated the working of MERN Stack. And by using the MERN stack we are going to bulid an e-commerce website
 
@@ -15,9 +15,9 @@ Which is,
 
 **N - Node.js** - Used with express.js for server handling
 
-### **Project Features :- **
+## Project Features :-
 
-#### **Pages**
+- **Pages**
 1. **Authentication**
    - Login / Signup functionality.
    - User validation and session management.
@@ -39,7 +39,7 @@ Which is,
 
 In this milestone we learned how to setup a development enviroment for a backend project and also started with making Basic UI for Login page.-
 
-Key Learnings - 
+**Key Learnings -**
 
 - Learned tailwind css for login page UI
 - Learned to setup basic tools used in backend like -
