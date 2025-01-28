@@ -70,6 +70,8 @@ Key learnings -
 - Learned to use jsonWebTokens for authentications.
 - And finally learned to effectively handle the errors.
 
+---
+
 ## Milestone 4: Project Overview -
 
 In this milestone we learned the following things -
@@ -81,6 +83,8 @@ Key learnings -
 - We learned password hashing using bcrypt
 - And lastly we learned about usage of jsonWebTokens for authentication.
 
+---
+
 ## Milestone 5: Project Overview -
 
 In this milestone we focused on creating a signup page for new users visiting the website,
@@ -89,6 +93,8 @@ Key Learnings -
 
 - We Learned how to create the UI for the Signup page using React and Tailwind CSS.
 - We also learned how to use RegEx (Regular expressions) for the validation of the inputs on the signup page.
+
+---
 
 ## Milestone 6: Project Overview -
 
@@ -105,6 +111,9 @@ In this milestone we simply implemented the logic for login and signup , that is
 
 - In this milestone we simply created the frontend part for the HomePage of our Website , And also learned how to route it.
 
-## Milestone 8: Project Overview -
+## Milestone 9: Project Overview -
 
-- In this milestone we simply created the frontend part for the HomePage of our Website , And also learned how to route it.
+- In this milestone we have simply created a form named create product to add products to our website. We created it using React.js and tailwind css.
+
+- The Key features of the form are - Name of product , its description , price , etc... and also a file upload feature to upload the pictures of the product.
+
