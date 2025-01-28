@@ -103,4 +103,8 @@ In this milestone we simply implemented the logic for login and signup , that is
 
 ## Milestone 8: Project Overview -
 
-In this milestone we simply created the frontend part for the HomePage of our Website , And also learned how to route it.
+- In this milestone we simply created the frontend part for the HomePage of our Website , And also learned how to route it.
+
+## Milestone 8: Project Overview -
+
+- In this milestone we simply created the frontend part for the HomePage of our Website , And also learned how to route it.
