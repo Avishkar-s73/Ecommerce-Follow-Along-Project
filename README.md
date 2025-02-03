@@ -111,4 +111,11 @@ In this milestone we simply implemented the logic for login and signup , that is
 
 - The Key features of the form are - Name of product , its description , price , etc... and also a file upload feature to upload the pictures of the product.
 
+## Milestone 10: Project Overview -
 
+- In this milestone we learned how to setup the backend for the createproduct page that we created in milestone9.
+
+
+## Milestone 11: Project Overview - 
+
+- In this milestone we created an api endpoint which will extract data from createproduct page and then will display the product on the home page.
