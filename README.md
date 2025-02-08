@@ -126,3 +126,7 @@ In this milestone we simply implemented the logic for login and signup , that is
 ## Milestone 13: Project Overview -
 
 - In this milestone we learned how to implement the Edit Feature for the My Products Page, including designing an edit form with pre-filled product details, handling form submissions, and making API requests to update the backend database.
+
+## Milestone 14: Project Overview -
+
+- In this milestone we learned how to implement the Delete feature for my_products Page.
