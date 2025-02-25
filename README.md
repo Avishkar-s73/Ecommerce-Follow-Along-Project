@@ -130,3 +130,12 @@ In this milestone we simply implemented the logic for login and signup , that is
 ## Milestone 14: Project Overview -
 
 - In this milestone we learned how to implement the Delete feature for my_products Page.
+
+## Milestone 15: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings - 
+
+- We have created an new Navbar with links to all pages.
+- We have also implemented the Navbar responsive to all screen sizes.
