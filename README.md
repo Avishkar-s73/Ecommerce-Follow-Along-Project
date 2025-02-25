@@ -141,7 +141,17 @@ In this milestone we simply implemented the logic for login and signup , that is
 
 In this milestone we learned the following things -
 
-Key learnings - 
+Key learnings -
 
 - We have created an new Navbar with links to all pages.
 - We have also implemented the Navbar responsive to all screen sizes.
+
+## Milestone 16: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings - 
+
+- We have an product info page that display all the product data.
+- We have also implemented the quantity button and add to card button.
+

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "../components/auth/Product";
-import NavBar from "../components/auth/Nav";
+import NavBar from "../components/auth/nav";
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // For loading state
