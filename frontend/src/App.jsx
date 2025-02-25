@@ -6,6 +6,7 @@ import {
   CreateProduct,
   MyProducts,
   Cart,
+  ProductDetails,
 } from "./Routes";
 
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/create-product/:id" element={<CreateProduct />} />
         <Route path="/my-products" element={<MyProducts />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );
