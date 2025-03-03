@@ -70,6 +70,8 @@ Key learnings -
 - Learned to use jsonWebTokens for authentications.
 - And finally learned to effectively handle the errors.
 
+---
+
 ## Milestone 4: Project Overview -
 
 In this milestone we learned the following things -
@@ -81,6 +83,8 @@ Key learnings -
 - We learned password hashing using bcrypt
 - And lastly we learned about usage of jsonWebTokens for authentication.
 
+---
+
 ## Milestone 5: Project Overview -
 
 In this milestone we focused on creating a signup page for new users visiting the website,
@@ -89,6 +93,8 @@ Key Learnings -
 
 - We Learned how to create the UI for the Signup page using React and Tailwind CSS.
 - We also learned how to use RegEx (Regular expressions) for the validation of the inputs on the signup page.
+
+---
 
 ## Milestone 6: Project Overview -
 
@@ -104,7 +110,7 @@ In this milestone we simply implemented the logic for login and signup , that is
 ## Milestone 8: Project Overview -
 
 - In this milestone we simply created the frontend part for the HomePage of our Website , And also learned how to route it.
-
+  
 ## Milestone 9: Project Overview -
 
 - In this milestone we have simply created a form named create product to add products to our website. We created it using React.js and tailwind css.
@@ -140,7 +146,6 @@ Key learnings -
 - We have created an new Navbar with links to all pages.
 - We have also implemented the Navbar responsive to all screen sizes.
 
-
 ## Milestone 16: Project Overview -
 
 In this milestone we learned the following things -
@@ -149,7 +154,6 @@ Key learnings -
 
 - We have an product info page that display all the product data.
 - We have also implemented the quantity button and add to card button.
-
 
 ## Milestone 17: Project Overview -
 
@@ -160,7 +164,6 @@ Key learnings -
 - We have edited the user schema to store cart products .
 - We have also implemented an end point to receive the product details and store in database.
 
-
 ## Milestone 18: Project Overview -
 
 In this milestone we learned the following things -
@@ -169,3 +172,4 @@ Key learnings -
 
 - We have create an endpoint to receive request from cart page.
 - We have also create an backend endpoint to fetch all the products inside cart with user mail.
+
