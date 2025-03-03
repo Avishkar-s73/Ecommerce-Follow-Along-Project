@@ -22,6 +22,7 @@ const NavBar = () => {
             { name: "My Products", path: "/my-products" },
             { name: "Add Products", path: "/create-product" },
             { name: "Cart", path: "/cart" },
+            { name: "Profile", path: "/profile" },
           ].map((link) => (
             <NavLink
               key={link.path}
@@ -54,6 +55,7 @@ const NavBar = () => {
               { name: "My Products", path: "/my-products" },
               { name: "Add Products", path: "/create-product" },
               { name: "Cart", path: "/cart" },
+              { name: "Profile", path: "/profile" },
             ].map((link) => (
               <li key={link.path}>
                 <NavLink
