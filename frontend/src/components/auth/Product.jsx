@@ -1,11 +1,9 @@
 import PropTypes from "prop-types";
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 const Product = ({ _id, name, images, description, price }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
-
   useEffect(() => {
     if (!images || images.length === 0) return;
     const interval = setInterval(() => {
