@@ -139,3 +139,34 @@ Key learnings -
 
 - We have created an new Navbar with links to all pages.
 - We have also implemented the Navbar responsive to all screen sizes.
+
+## Milestone 16: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings -
+
+- We have an product info page that display all the product data.
+- We have also implemented the quantity button and add to card button.
+
+## Milestone 17: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings -
+
+- We have edited the user schema to store cart products .
+- We have also implemented an end point to receive the product details and store in database.
+
+## Milestone 18: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings -
+
+- We have create an endpoint to receive request from cart page.
+- We have also create an backend endpoint to fetch all the products inside cart with user mail.
+
+## Milestone 19: Project Overview -
+
+- In this milestone we learned how to create the **Add to cart** functionality to our e-commerce website.
