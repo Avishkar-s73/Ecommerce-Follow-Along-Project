@@ -8,6 +8,7 @@ import {
   Cart,
   ProductDetails,
   Profile,
+  CreateAddress,
 } from "./Routes";
 
 import "./App.css";
@@ -18,13 +19,14 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/create-product" element={<CreateProduct />} />
         <Route path="/create-product/:id" element={<CreateProduct />} />
         <Route path="/my-products" element={<MyProducts />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/create-address" element={<CreateAddress />} />
       </Routes>
     </BrowserRouter>
   );
