@@ -174,3 +174,13 @@ Key learnings -
 ## Milestone 20: Project Overview -
 
 In this milestone we created a profile page that shows the personal details of the user such as Name , email ect.....
+
+## Milestone 21: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings -
+
+•⁠ ⁠We have create address form in frontend page.
+•⁠ ⁠We have also create an state that will store input address
+•⁠ ⁠We have also impmented the logic where we click on add address in profile it should navigate to this form page.
