@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import Nav from "../components/auth/nav";
+import Nav from "../components/auth/Nav";
 const CreateProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
