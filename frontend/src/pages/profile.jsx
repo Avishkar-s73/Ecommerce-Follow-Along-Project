@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AddressCard from "../components/auth/AddressCard";
-import Nav from "../components/auth/Nav";
+import Nav from "../components/auth/nav";
 import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
