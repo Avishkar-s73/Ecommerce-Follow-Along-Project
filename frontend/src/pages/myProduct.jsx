@@ -1,82 +1,53 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types"; // Import PropTypes
-import { useNavigate } from "react-router-dom";
-import axios from "axios"; //Add this line for M14
+import React, { useEffect, useState } from "react";
+import Myproduct from "../components/auth/myproduct";
+import NavBar from "../components/auth/nav";
 
-function Myproduct({ _id, name, images, description, price }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+export default function MyProducts() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const email = "avishkar@gmail.com"; //mail which is present in mongodb
 
   useEffect(() => {
-    if (!images || images.length === 0) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [images]);
+    fetch(`http://localhost:8000/api/v2/product/my-products?email=${email}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setProducts(data.products);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(" Error fetching products:", err);
+        setError(err.message);
+        setLoading(false);
+      });
+  }, [email]);
 
-  const currentImage =
-    images && images.length > 0 ? images[currentIndex] : null;
+  if (loading) {
+    return (
+      <div className="text-center text-white mt-10">Loading products...</div>
+    );
+  }
 
-  const handleEdit = () => {
-    navigate(`/create-product/${_id}`);
-  };
-  const handleDelete = async () => {
-    //Add this line for M14
-    try {
-      const response = await axios.delete(
-        `http://localhost:8000/api/v2/product/delete-product/${_id}`
-      );
-      if (response.status === 200) {
-        alert("Product deleted successfully!");
-        // Reload the page or fetch products again
-        window.location.reload();
-      }
-    } catch (err) {
-      console.error("Error deleting product:", err);
-      alert("Failed to delete product.");
-    }
-  };
+  if (error) {
+    return <div className="text-center text-red-500 mt-10">Error: {error}</div>;
+  }
 
   return (
-    <div className="bg-neutral-200 p-4 rounded-lg shadow-md flex flex-col justify-between">
-      <div className="w-64 h-64 ">
-        {currentImage && (
-          <img
-            src={`http://localhost:8000${currentImage}`}
-            alt={name}
-            className=" object-cover rounded-lg mb-2"
-          />
-        )}
-        <h2 className="text-lg font-bold">{name}</h2>
-        <p className="text-sm opacity-75 mt-2">{description}</p>
+    <>
+      <NavBar />
+      <div className="w-full min-h-screen bg-black">
+        <h1 className="text-3xl text-center text-white py-6">My products</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
+          {products.map((product) => (
+            <Myproduct key={product._id} {...product} />
+          ))}
+        </div>
       </div>
-      <div className="w-full mt-4">
-        <p className="text-lg font-bold my-2">${price.toFixed(2)}</p>
-        <button
-          className="w-full text-white px-4 py-2 my-1 rounded-md bg-neutral-900 hover:bg-neutral-700 transition duration-300"
-          onClick={handleEdit}
-        >
-          Edit
-        </button>
-        <button
-          className="w-full text-white px-4 py-2 my-1 rounded-md bg-neutral-900 hover:bg-neutral-700 transition duration-300"
-          onClick={handleDelete}
-        >
-          Delete
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
-
-// Define PropTypes
-Myproduct.propTypes = {
-  _id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  description: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-};
-
-export default Myproduct;
