@@ -389,3 +389,7 @@ In this milestone we created the frontend for the orderComfinmation page in our 
 ## Milestone 25: Project Overview -
 
 In this milestone we configured the backend for the place order page.
+
+## Milestone 26: Project Overview -
+
+In this milestone we have created the endpoint for the my-orders page.
