@@ -8,8 +8,9 @@ import {
   Cart,
   ProductDetails,
   Profile,
-  CreateAddress,
   SelectAddress,
+  CreateAddress,
+  OrderConfirmation,
 } from "./Routes";
 
 import "./App.css";
@@ -28,7 +29,8 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/create-address" element={<CreateAddress />} />
-        <Route path="select-address" element={<SelectAddress />} />
+        <Route path="/select-address" element={<SelectAddress />} />
+        <Route path="/order-confirmation" element={<OrderConfirmation />} />
       </Routes>
     </BrowserRouter>
   );
