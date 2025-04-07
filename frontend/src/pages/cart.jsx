@@ -1,12 +1,12 @@
 import CartProduct from "../components/auth/CartProduct";
 import Nav from "../components/auth/nav";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
-  const email = "avishkar@gmail.com";
-  const navigate = useNavigate();
+  const email = "priya@gmail.com";
+  const navigate = useNavigate(); // Initialize navigate
 
   useEffect(() => {
     fetch(`http://localhost:8000/api/v2/product/cartproducts?email=${email}`)
@@ -33,7 +33,7 @@ const Cart = () => {
   console.log("Products:", products);
 
   const handlePlaceOrder = () => {
-    navigate("/select-address");
+    navigate("/select-address"); // Navigate to the Select Address page
   };
 
   return (

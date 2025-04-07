@@ -206,3 +206,8 @@ In this milestone we have created the frontend part for the myOrders page.
 ## Milestone 28: Project Overview -
 
 In this milestone we have configured the backend for the myOrders page.
+
+## Milestone 29: Payment Integration
+
+Online Payments: Integrate PayPal API for real transactions
+Checkout Flow: Seamless payment experience
