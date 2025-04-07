@@ -11,6 +11,7 @@ import {
   SelectAddress,
   CreateAddress,
   OrderConfirmation,
+  MyOrdersPage,
 } from "./Routes";
 
 import "./App.css";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/create-address" element={<CreateAddress />} />
         <Route path="/select-address" element={<SelectAddress />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
+        <Route path="/myorders" element={<MyOrdersPage />} />
       </Routes>
     </BrowserRouter>
   );
