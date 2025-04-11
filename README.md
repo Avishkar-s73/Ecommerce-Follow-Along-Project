@@ -217,10 +217,27 @@ Checkout Flow: Seamless payment experience
 
 In this milestone we learned the following things -
 
-Key learning -
-How to use redux for global state management
-Implement redux store to store all global states
+Key learning - How to use redux for global state management Implement redux store to store all global states
 
 ## Milestone 31: Project Overview -
 
 In this milestone we learned how to use redux toolkit for efficient state management.
+
+## Milestone 32: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learnings -
+
+The use will be use redux to store the state and access in all the pages.
+In Login page we will use Dispatch method to store the mail inside global state.
+In all the remaining pages acc the mail stored in global state using useSelector.
+
+## Milestone 33: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learning -
+
+Learn how to create an JWT token.
+How to store the tokens inside the cookie.
