@@ -1,8 +1,14 @@
+if (process.env.NODE_ENV !== 'PRODUCTION') {
+  require('dotenv').config({
+    path: '../config/.env',
+  });
+}
+
 const mongoose = require("mongoose");
 
 const connectDatabase = () => {
   mongoose
-    .connect(process.env.MONGO_URI, {
+    .connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 export default function CartProduct({ _id, name, images, quantity, price }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [quantityVal, setQuantityVal] = useState(quantity);
+  const email = useSelector((state) => state.user.email);
 
   useEffect(() => {
     if (!images || images.length === 0) return;
@@ -27,13 +30,13 @@ export default function CartProduct({ _id, name, images, quantity, price }) {
   };
 
   const updateQuantityVal = (quantity) => {
-    fetch("http://localhost:8000/api/v2/product/cartproducts/quantity", {
+    fetch("http://localhost:8000/api/v2/product/cartproduct/quantity", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: "avishkar@gmail.com",
+        email,
         productId: _id,
         quantity,
       }),
@@ -58,11 +61,18 @@ export default function CartProduct({ _id, name, images, quantity, price }) {
     <div className="flex flex-col md:flex-row justify-between items-center p-4 border-b border-neutral-300 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="flex flex-col gap-4">
         <div className="w-40 h-40 overflow-hidden rounded-lg">
-          <img
-            src={`http://localhost:8000${currentImage}`}
-            alt={name}
-            className="object-cover w-full h-full"
-          />
+          <AnimatePresence>
+            <motion.img
+              key={currentImage}
+              src={`http://localhost:8000${currentImage}`}
+              alt={name}
+              className="object-cover w-full h-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            />
+          </AnimatePresence>
         </div>
         <div className="flex gap-2 items-center justify-center">
           <button

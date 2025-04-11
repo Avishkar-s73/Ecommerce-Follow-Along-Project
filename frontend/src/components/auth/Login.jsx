@@ -1,24 +1,41 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setemail } from "../../store/userAction";
+import { useNavigate } from "react-router-dom";
+
+// Ensure axios sends cookies with requests
+axios.defaults.withCredentials = true;
 
 const Login = () => {
+  // State to hold email and password values
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(""); // For handling error messages
+  const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
+  // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submit behavior
     try {
-      const response = await axios.post("http://localhost:8000/api/v2/user", {
-        email,
-        password,
-      });
+      // Make the POST request to the backend (replace with your actual API endpoint)
+      const response = await axios.post(
+        "http://localhost:8000/api/v2/user/login",
+        { email, password }
+      );
 
+      dispatch(setemail(email));
+      // Assuming response contains a token or user data on successful login
       console.log(response.data);
+      // Redirect or take some action upon successful login here
+      navigate("/");
     } catch (error) {
-      setError("Invalid Credentials!");
-      console.error("Login Error", error);
+      // Handle errors (e.g., invalid credentials)
+      setError("There was an error logging in. Please check your credentials.");
+      console.error("There was an error logging in!", error);
     }
   };
 
@@ -31,7 +48,7 @@ const Login = () => {
       </div>
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6">
             <div>
               <label
                 htmlFor="email"
@@ -97,17 +114,21 @@ const Login = () => {
               </div>
             </div>
             <div>
+              {/* onClick for Submit Button */}
               <button
-                type="submit"
-                className="relative w-full h-6 flex justify-center items-center  py-4 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                type="button"
+                onClick={handleSubmit}
+                className="relative w-full h-10 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Submit
               </button>
             </div>
-            <p className="text-center">
-              Do not have accout?{" "}
+            {error && <p className="text-center text-red-900">{error}</p>}{" "}
+            {/* Display error message if there is one */}
+            <p className="text-center text-red-900">
+              Donot have an account?{" "}
               <Link to={"/signup"} className="text-blue-600">
-                Signup
+                Sign up
               </Link>
             </p>
           </form>

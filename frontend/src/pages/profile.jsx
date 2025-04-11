@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AddressCard from "../components/auth/AddressCard";
 import Nav from "../components/auth/nav";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Profile() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -10,20 +11,18 @@ export default function Profile() {
     phoneNumber: "",
     avatarUrl: "",
   });
-
   const navigate = useNavigate();
+  const email = useSelector((state) => state.user.email);
+
   const [addresses, setAddresses] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `http://localhost:8000/api/v2/user/profile?email=${"avishkar@gmail.com"}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
+    fetch(`http://localhost:8000/api/v2/user/profile?email=${email}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -67,7 +66,6 @@ export default function Profile() {
                   onError={(e) => {
                     e.target.onerror = null; // Prevents infinite loop if the default image also fails
                     e.target.src = `https://cdn.vectorstock.com/i/500p/17/61/male-avatar-profile-picture-vector-10211761.jpg`;
-                    console.log("Avatar URL:", personalDetails.avatarUrl);
                   }}
                 />
               </div>
