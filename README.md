@@ -1,3 +1,4 @@
+
 # E--commerce-website
 
 ---
@@ -211,6 +212,16 @@ In this milestone we have configured the backend for the myOrders page.
 
 Online Payments: Integrate PayPal API for real transactions
 Checkout Flow: Seamless payment experience
+
+## Milestone 30: Project Overview -
+
+In this milestone we learned the following things -
+
+Key learning - How to use redux for global state management Implement redux store to store all global states
+
+## Milestone 31: Project Overview -
+
+In this milestone we learned how to use redux toolkit for efficient state management.
 
 ## Milestone 32: Project Overview -
 
